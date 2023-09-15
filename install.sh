@@ -29,6 +29,19 @@ source ~/.bashrc
 acme.sh --set-default-ca --server letsencrypt
 acme.sh --issue -d $domain --standalone -k ec-256 --force
 acme.sh --installcert -d $domain --ecc  --key-file  /tuic/private.key   --fullchain-file /tuic/cert.crt
+acme.sh --upgrade --auto-upgrade
+
+if `test -s /tuic/private.key` 
+  then 
+        echo -e "证书申请成功!\n"
+        echo -n "证书路径:"
+        echo
+        echo -e "/tuic/cert.crt"
+        echo -e "/tuic/private.key\n"
+   else
+        echo "证书安装失败！请检查原因！有问题可联系telegram @lstiiu"
+        exit
+fi
 
 cat << EOF > /etc/systemd/system/tuic.service
 [Unit]
