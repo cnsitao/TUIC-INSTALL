@@ -2,7 +2,7 @@
 
 clear
 echo "Hello! 欢迎使用TUIC脚本"
-echo "作者:https://t.me/iu536"
+echo "作者:https://t.me/lstiiu"
 
 read -p "请输入你的域名:" domain
 
