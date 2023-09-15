@@ -54,7 +54,7 @@ uuid=`cat /proc/sys/kernel/random/uuid`
 
 cat << EOF > /tuic/config.json
 {
-    "server": "[::]:10010",
+    "server": "[::]:$port",
     "users": {
         "$uuid": "$password"    },
     "certificate": "/tuic/cert.crt",
