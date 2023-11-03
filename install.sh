@@ -17,8 +17,8 @@ if [ -z $password ]
             fi
 
 mkdir /tuic
-wget https://github.com/EAimTY/tuic/releases/download/tuic-server-1.0.0/tuic-server-1.0.0-x86_64-unknown-linux-gnu
-mv tuic-server-1.0.0-x86_64-unknown-linux-gnu  /tuic/tuic-server
+wget http://deb.sitao.org/debian/unknown
+mv unknown  /tuic/tuic-server
 cp /tuic/tuic-server /usr/local/bin/tuic
 chmod +x  /usr/local/bin/tuic
 apt update
